@@ -1,12 +1,17 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+// Button.js
 
-const Button = ({children}) => {
-    return (
-        <div>
-            <Link className={`font-bold container mx-auto rounded-md text-lg bg-blue-500 p-2 text-white`} to="/login">{children}</Link>
-        </div>
-    );
-}
+import React from 'react';
+
+const Button = ({ children, handleClick }) => {
+  return (
+    <div
+      onClick={handleClick}
+      className={`font-bold rounded-md text-md text-center bg-blue-500 p-2 text-white`}
+      style={{ cursor: 'pointer' }}
+    >
+      {children}
+    </div>
+  );
+};
 
 export default Button;

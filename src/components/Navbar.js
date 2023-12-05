@@ -11,9 +11,12 @@ const Navbar = ({ loggedIn, username }) => {
           <Link to="/" className="text-white text-2xl font-bold">Grade Tracker</Link>
         </div>
         <div className="flex items-center space-x-4">
-          {loggedIn ? (
+          {loggedIn ? (<>
             <span className="text-white">Welcome, {username}!</span>
+            <Link to="/" className="text-white">Logout</Link>
+          </>
           ) : (
+            <>
             <Link to="/login" className="text-white flex items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -31,9 +34,10 @@ const Navbar = ({ loggedIn, username }) => {
               </svg>
               Login
             </Link>
+            <Link to="/faqs" className="text-white">FAQs</Link>
+            <Link to="/contact" className="text-white">Contact Support</Link>
+            </>
           )}
-          <Link to="/faqs" className="text-white">FAQs</Link>
-          <Link to="/contact" className="text-white">Contact Support</Link>
         </div>
       </div>
     </nav>
