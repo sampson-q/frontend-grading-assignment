@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import InstructorContactPage from "./pages/InstructorContactPage";
 import MissingGradeForm from "./pages/MissingGrade";
+import GradeReportPage from "./pages/GradeReportPage";
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                     <Route path="/dashboard" element={<Dashboard />} />
                     <Route path="/icp" element={<InstructorContactPage />} />
                     <Route path="/rmg" element={<MissingGradeForm />} />
+                    <Route path="/grp" element={<GradeReportPage />} />
                 </Routes>
             </div>
         </Router>
