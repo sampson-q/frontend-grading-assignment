@@ -11,8 +11,8 @@ const ErrorMessage = ({ errorMessage }) => {
     return (
         <>
             {showMessageBox && (
-                <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 border border-red-200 px-2 py-1 rounded">
-                    <div className="sm:col-span-5">
+                <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-12 border border-red-200 px-2 py-1 rounded">
+                    <div className="sm:col-span-11">
                         {errorMessage}
                     </div>
 

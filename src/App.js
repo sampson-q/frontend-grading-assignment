@@ -5,6 +5,7 @@ import LandingPage from "./pages/LandingPage";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import InstructorContactPage from "./pages/InstructorContactPage";
+import MissingGradeForm from "./pages/MissingGrade";
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
                     <Route path="/login" element={<Login />} />
                     <Route path="/dashboard" element={<Dashboard />} />
                     <Route path="/icp" element={<InstructorContactPage />} />
+                    <Route path="/rmg" element={<MissingGradeForm />} />
                 </Routes>
             </div>
         </Router>
