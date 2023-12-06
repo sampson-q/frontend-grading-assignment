@@ -7,6 +7,8 @@ const MissingGradeForm = () => {
     const [formData, setFormData] = useState({
         studentId: '123123', // Simulating student ID
         courseName: '',
+        instructorName: '',
+        expectedGrade: '',
         description: '',
     });
 
@@ -21,12 +23,18 @@ const MissingGradeForm = () => {
     };
 
     const isFormValid = () => {
-        return formData.studentId && formData.courseName && formData.description;
+        return (
+            formData.studentId &&
+            formData.courseName &&
+            formData.instructorName &&
+            formData.expectedGrade &&
+            formData.description
+        );
     };
 
     const handleSubmit = (event) => {
         event.preventDefault();
-    
+
         if (isFormValid()) {
             alert('Form submitted successfully!');
             window.location.reload();
@@ -34,23 +42,22 @@ const MissingGradeForm = () => {
             setError('Please fill out all the required fields before submitting.');
         }
     };
-    
 
     return (
         <>
             <Navbar loggedIn={true} username={"Dorinda Kpo"} />
             <div className="container mx-auto mt-8 p-8 bg-white rounded-lg shadow-lg">
-                
                 <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-12 px-2 py-1">
                     <div className="sm:col-span-11">
                         <h2 className="text-3xl font-semibold mb-6 text-blue-500">Report Missing Grade</h2>
                     </div>
-
-                    <div className="sm:col-span-1 w-20">    
-                        <Button color="blu" handleClick={() => window.location.href="/dashboard"}>&larr; Back</Button>
+                    <div className="sm:col-span-1 w-20">
+                        <Button color="blue" handleClick={() => window.location.href="/dashboard"}>
+                            &larr; Back
+                        </Button>
                     </div>
                 </div>
-                
+
                 <form>
                     {error && <ErrorMessage errorMessage={error} />}
                     <div className="grid grid-cols-1 gap-y-6 mt-5">
@@ -69,8 +76,36 @@ const MissingGradeForm = () => {
                             />
                         </div>
                         <div>
+                            <label htmlFor="instructorName" className="block text-sm font-medium text-gray-700">
+                                Instructor Name
+                            </label>
+                            <input
+                                type="text"
+                                id="instructorName"
+                                name="instructorName"
+                                value={formData.instructorName}
+                                onChange={handleChange}
+                                className="mt-1 p-2 w-full border rounded-md"
+                                required
+                            />
+                        </div>
+                        <div>
+                            <label htmlFor="expectedGrade" className="block text-sm font-medium text-gray-700">
+                                Expected Grade
+                            </label>
+                            <input
+                                type="text"
+                                id="expectedGrade"
+                                name="expectedGrade"
+                                value={formData.expectedGrade}
+                                onChange={handleChange}
+                                className="mt-1 p-2 w-full border rounded-md"
+                                required
+                            />
+                        </div>
+                        <div>
                             <label htmlFor="description" className="block text-sm font-medium text-gray-700">
-                                Description
+                                Explanation
                             </label>
                             <textarea
                                 id="description"
