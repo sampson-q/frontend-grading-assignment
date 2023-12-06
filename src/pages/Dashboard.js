@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
+import Button from '../components/Button';
 
 const Dashboard = () => {
     // Placeholder data for demonstration
@@ -17,8 +18,8 @@ const Dashboard = () => {
     return (
         <>
             <Navbar loggedIn={true} username={"Dorinda Kpo"} />
-            <div className="container mx-auto mt-8 p-8 bg-white rounded-lg shadow-lg">
-                <h2 className="text-3xl font-semibold mb-6 text-blue-500">Dashboard</h2>
+            <div className="container mx-auto mt-20 p-8 bg-white rounded-lg shadow-lg">
+            <h2 className="text-3xl font-semibold mb-6">Dashboard</h2>
 
                 {/* Display Current Grades */}
                 <div className="mb-8">
@@ -31,8 +32,7 @@ const Dashboard = () => {
                         ))}
                     </ul>
                 </div>
-
-                {/* Display Alerts for Missing Grades */}
+                
                 <div>
                     <h3 className="text-xl font-semibold mb-4 text-gray-800">Missing Grades Alerts</h3>
                     <ul className="list-disc pl-6">
@@ -43,7 +43,17 @@ const Dashboard = () => {
                         ))}
                     </ul>
                 </div>
+                <div className="mt-32 grid grid-cols-1 sm:grid-cols-6 px-2 py-1">
+                    <div className="sm:col-span-3 w-48 mx-auto">
+                        <Button color="green" handleClick={() => window.location.href="/rmg"}>Report Missing Grades</Button>
+                    </div>
+
+                    <div className="sm:col-span-3 w-48 mx-auto">
+                        <Button handleClick={() => window.location.href="/icp"}>Contact Instructor</Button>
+                    </div>
+                </div>
             </div>
+
         </>
     );
 };
