@@ -7,6 +7,8 @@ import Dashboard from "./pages/Dashboard";
 import InstructorContactPage from "./pages/InstructorContactPage";
 import MissingGradeForm from "./pages/MissingGrade";
 import GradeReportPage from "./pages/GradeReportPage";
+import HelpAndSupportPage from "./pages/HelpAndSupportPage";
+import Footer from "./components/Footer";
 
 function App() {
     return (
@@ -19,7 +21,9 @@ function App() {
                     <Route path="/icp" element={<InstructorContactPage />} />
                     <Route path="/rmg" element={<MissingGradeForm />} />
                     <Route path="/grp" element={<GradeReportPage />} />
+                    <Route path="/contact" element={<HelpAndSupportPage />} />
                 </Routes>
+                <Footer />
             </div>
         </Router>
     );
