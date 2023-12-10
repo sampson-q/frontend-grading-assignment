@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = ({loggedIn, username}) => {
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
     const toggleSidebar = () => {
@@ -15,17 +15,34 @@ const Navbar = () => {
     return (
         <div>
             {/* Navbar */}
-            <nav className="bg-blue-500 p-4">
+            <nav className="bg-blue-500 p-4 top-0 fixed w-full">
                 <div className="flex items-center justify-between">
-                    <div className="text-white text-2xl font-bold">Grade Tracker</div>
+                    <div className="text-white text-2xl font-bold">
+                        {loggedIn ?
+                            "Grade Tracker" :
+                            <Link to="/">Grade Tracker</Link>
+                        }
+                    </div>
                     <div className="flex items-center">
-                        {/* Move the links here, outside of the responsive container */}
-                        <div className="text-white sm:flex hidden">
-                            <Link to="/" className="text-white ml-4">Home</Link>
-                            <Link to="/login" className="text-white ml-4">Login</Link>
-                            <Link to="/faqs" className="text-white ml-4">FAQs</Link>
-                            <Link to="/contact" className="text-white ml-4">Contact Support</Link>
-                        </div>
+                        {!loggedIn &&
+                            <>
+                                {/* Move the links here, outside of the responsive container */}
+                                <div className="text-white sm:flex hidden">
+                                    <Link to="/login" className="text-white ml-4">Login</Link>
+                                    <Link to="/faqs" className="text-white ml-4">FAQs</Link>
+                                    <Link to="/contact" className="text-white ml-4">Contact Support</Link>
+                                </div>
+                            </>
+                        }
+                        {loggedIn &&
+                            <>
+                                {/* Move the links here, outside of the responsive container */}
+                                <div className="text-white font-semibold sm:flex hidden">
+                                    Welcome, {username}!
+                                    <Link to="/" className="ml-6">Logout</Link>
+                                </div>
+                            </>
+                        }
                         <button className="text-white lg:hidden" onClick={toggleSidebar}>☰</button>
                     </div>
                 </div>
@@ -59,10 +76,18 @@ const Navbar = () => {
                                     </svg>
                                 </button>
                             </div>
-                            <Link to="/" className="mb-4 block">Home</Link>
-                            <Link to="/login" className="mb-4 block">Login</Link>
-                            <Link to="/faqs" className="mb-4 block">FAQs</Link>
-                            <Link to="/contact" className="mb-4 block">Contact Support</Link>
+                            {loggedIn ?
+                                <>
+                                    {username}
+                                    <div className="mt-6"></div>
+                                    <Link to="/" className="">Logout</Link>        
+                                </>:
+                                <>
+                                    <Link to="/login" className="mb-4 block">Login</Link>
+                                    <Link to="/faqs" className="mb-4 block">FAQs</Link>
+                                    <Link to="/contact" className="mb-4 block">Contact Support</Link>
+                                </>
+                            }
                         </div>
                     </div>
                 </div>

@@ -13,7 +13,7 @@ import Footer from "./components/Footer";
 function App() {
     return (
         <Router>
-            <div>
+            <div className="mb-28">
                 <Routes>
                     <Route path="/" element={<LandingPage />} />
                     <Route path="/login" element={<Login />} />
@@ -23,6 +23,8 @@ function App() {
                     <Route path="/grp" element={<GradeReportPage />} />
                     <Route path="/contact" element={<HelpAndSupportPage />} />
                 </Routes>
+            </div>
+            <div>
                 <Footer />
             </div>
         </Router>
