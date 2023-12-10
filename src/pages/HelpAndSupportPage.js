@@ -21,7 +21,7 @@ const HelpAndSupportPage = () => {
     };
 
     return (
-        <>        
+        <>
             <Navbar loggedIn={false} /> {/* Adjust loggedIn status */}
             <div className="container mx-auto mt-5 p-8 bg-white rounded-lg shadow">
 
@@ -30,13 +30,13 @@ const HelpAndSupportPage = () => {
                         <h2 className="text-3xl font-semibold mb-6 text-blue-500">Help and Support</h2>
                     </div>
                     <div className="sm:col-span-1 w-20">
-                        <Button color="blue" handleClick={() => window.location.href="/dashboard"}>
+                        <Button color="blue" handleClick={() => window.location.href = "/dashboard"}>
                             &larr; Back
                         </Button>
                     </div>
                 </div>
 
-                {/* FAQ Section */}
+                { }
                 <div className="mb-8">
                     <h3 className="text-xl font-semibold mb-4 text-gray-800">Frequently Asked Questions (FAQ)</h3>
                     <ul className="list-disc pl-6">
@@ -48,11 +48,11 @@ const HelpAndSupportPage = () => {
                             <span className="font-semibold">Q: Can I contact my instructor regarding grades?</span><br />
                             A: Yes, you can use the <a href="/icp">Contact Instructor</a> page for that purpose.
                         </li>
-                        {/* Add more FAQ items as needed */}
+                        { }
                     </ul>
                 </div>
 
-                {/* Contact Form */}
+                { }
                 <div>
                     <h3 className="text-xl font-semibold mb-4 text-gray-800">Contact Technical Support</h3>
                     <form onSubmit={handleContactFormSubmit}>

@@ -3,20 +3,24 @@ import Navbar from '../components/Navbar';
 import Button from '../components/Button';
 
 const instructors = [
-    { id: 1, name: 'John Doe', email: 'john.doe@example.com', department: 'Computer Science', picture: 'john_doe.jpg' },
-    { id: 2, name: 'Jane Smith', email: 'jane.smith@example.com', department: 'Mathematics', picture: 'jane_smith.jpg' },
-    // Add more instructors as needed
+    { id: 1, name: 'Dwumfour Abdullai Aziz', email: 'adwumfour@ug.edu.gh', department: 'Computer Science', picture: 'john_doe.jpg' },
+    { id: 2, name: 'DCOP Samuel Winful ', email: 'anyanfo@gmail.com ', department: 'Computer Science', picture: 'jane_smith.jpg' },
+    { id: 3, name: 'Ben-Bright Benuwa', email: 'benuwa778@gmail.com ', department: 'Computer Science', picture: 'john_doe.jpg' },
+    { id: 4, name: 'Michael Agbo Tettey Soli', email: ': msoli@ug.edu.gh / agbotettey@gmail.com', department: 'Computer Science', picture: 'john_doe.jpg' },
+    { id: 5, name: 'PBS', email: 'pbs@ug.edu.gh', department: 'Computer Science', picture: 'john_doe.jpg' },
+    { id: 6, name: 'Mark Attah Mensah', email: 'markmenshah@ug.edu.gh.com', department: 'Computer Science', picture: 'john_doe.jpg' },
+
+
 ];
 
 const InstructorContactPage = () => {
     const sendSimulatedEmail = (instructorName, instructorEmail) => {
-        // Simulate sending an email (you can customize this logic as needed)
         alert(`Sending email to ${instructorName} at ${instructorEmail}`);
     };
 
     return (
-        <>        
-            <Navbar loggedIn={true} username={"Dorinda Kpo"} />
+        <>
+            <Navbar loggedIn={true} username={""} />
             <div className="container mx-auto mt-20 p-8 bg-white rounded-lg shadow">
                 <h2 className="text-3xl font-semibold mb-6">Instructor Contact Page</h2>
 
@@ -39,7 +43,7 @@ const InstructorContactPage = () => {
                     </div>
                 ))}
                 <div className='w-20 mt-40'>
-                    <Button color="blue" handleClick={() => window.location.href="/dashboard"}>&larr; Back</Button>
+                    <Button color="blue" handleClick={() => window.location.href = "/dashboard"}>&larr; Back</Button>
                 </div>
             </div>
         </>

@@ -18,7 +18,7 @@ const Login = () => {
         }
 
         // Simulate login logic (replace with actual authentication)
-        if (studentId === '123123' && password === 'asdasd') {
+        if (studentId && password) {
             window.location.href = "/dashboard";
             setError('');
         } else {
@@ -35,7 +35,7 @@ const Login = () => {
                 <div className="mx-auto w-[800px] mt-20 border-b border-gray-900/10 pb-12">
                     <h2 className="font-semibold text-gray-900 text-2xl">Login</h2>
 
-                    {error && <ErrorMessage errorMessage={error}/>}
+                    {error && <ErrorMessage errorMessage={error} />}
 
                     <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                         <div className="sm:col-span-4">
@@ -48,8 +48,18 @@ const Login = () => {
                                     name="student-id"
                                     id="student-id"
                                     autoComplete="given-name"
+
                                     value={studentId}
-                                    onChange={(e) => setStudentId(e.target.value)}
+                                    onChange={(e) => {
+                                        const parsedInt = parseInt(e.target.value, 10);
+                                        if (isNaN(parsedInt)) {
+                                            // Not a valid integer sequence, revert to previous valid state
+                                            setStudentId(prevStudentID => prevStudentID);
+                                        } else {
+                                            // Valid integer sequence, update the state
+                                            setStudentId(parsedInt);
+                                        }
+                                    }}
                                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 />
                             </div>
@@ -64,6 +74,7 @@ const Login = () => {
                                     type="password"
                                     name="password"
                                     id="password"
+                                    pattern="\d+"
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
                                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"

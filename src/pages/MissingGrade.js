@@ -5,7 +5,7 @@ import ErrorMessage from '../components/ErrorMessage';
 
 const MissingGradeForm = () => {
     const [formData, setFormData] = useState({
-        studentId: '123123', // Simulating student ID
+        studentId: '123123',
         courseName: '',
         instructorName: '',
         expectedGrade: '',
@@ -52,7 +52,7 @@ const MissingGradeForm = () => {
                         <h2 className="text-3xl font-semibold mb-6 text-blue-500">Report Missing Grade</h2>
                     </div>
                     <div className="sm:col-span-1 w-20">
-                        <Button color="blue" handleClick={() => window.location.href="/dashboard"}>
+                        <Button color="blue" handleClick={() => window.location.href = "/dashboard"}>
                             &larr; Back
                         </Button>
                     </div>
