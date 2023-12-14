@@ -46,23 +46,39 @@ npm start
 ```
 1. Logging in
 Upon opening the landing page, click "Get Started" button to access the the log in page. 
-Enter the student ID (e.g., "11071863") and password (e.g., "password"). The Student ID acceptsonly integers but password accepts both leters and numbers
+Enter the student ID (e.g., "11071863") and password (e.g., "password"). The Student ID acceptsonly integers but password accepts both leters and numbers.
+![](src/assets/Screenshots/Landingpage.png)
+![](src/assets/Screenshots/loginpage.png)
 
-2. Dashboard
-After logging in, you will be directed to the dashboard where you can see your grade report card and any missing grades that need reporting. 
 
-3. Report Missing grades
-Click 'Report Missing Grades' from dashboard to navigate to the form where you can input your course code, description, expected grade and instructor name and finally submit the report
+3. Dashboard
+After logging in, you will be directed to the dashboard where you can see your grade report card and any missing grades that need reporting.
+![](src/assets/Screenshots/dashboardpage.png)
 
-4. Contacting Instructors
+
+5. Report Missing grades
+Click 'Report Missing Grades' from dashboard to navigate to the form where you can input your course code, description, expected grade and instructor name and finally submit the report.
+![](src/assets/Screenshots/reportmissing.png)
+![](src/assets/Screenshots/reportmissing.png)
+
+
+7. Grade Report
+![](src/assets/Screenshots/gradereport.png)
+
+
+8. Contacting Instructors
 Click on the 'Contact Instructors' button from the dashboard to reach the contact page. Click on any of the emails provided to send a message. 
-contacting instructors
+![](src/assets/Screenshots/Contact1.png)
 
-5. The FAQs/ Help and Support 
-Provides answers to questions student ask with regards to issues concerning missing grades and a form to contact the technical support team
+![](src/assets/Screenshots/Contact2.png)
 
 
-6. Footer
+
+8. The FAQs/ Help and Support 
+Provides answers to questions student ask with regards to issues concerning missing grades and a form to contact the technical support team.
+
+
+9. Footer
 The footer contains links to social media platforms such as Facebook, Twitter and LinkedIn as well as the contact information of the School's official helpdesk (UGCS helpdesk)
 
 
