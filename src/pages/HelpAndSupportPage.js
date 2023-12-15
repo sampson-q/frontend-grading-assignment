@@ -11,7 +11,7 @@ const HelpAndSupportPage = () => {
 
     const handleContactFormSubmit = (event) => {
         event.preventDefault();
-        // Add logic for submitting the contact form data to the backend or any other action
+
         alert('Contact form submitted successfully!');
         setFormData({
             name: '',
@@ -22,7 +22,7 @@ const HelpAndSupportPage = () => {
 
     return (
         <>
-            <Navbar loggedIn={false} /> {/* Adjust loggedIn status */}
+            <Navbar loggedIn={false} /> { }
             <div className="container mx-auto mt-5 p-8 bg-white rounded-lg shadow">
 
                 <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-12 px-2 py-1">
