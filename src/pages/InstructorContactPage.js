@@ -25,7 +25,7 @@ const InstructorContactPage = () => {
 
     return (
         <>
-            <Navbar loggedIn={true} username={""} />
+            <Navbar loggedIn={true} username={"James Caster"} />
             <div className="container mx-auto mt-20 p-8 bg-white rounded-lg shadow">
                 <h2 className="text-3xl font-semibold mb-6">Instructor Contact Page</h2>
 

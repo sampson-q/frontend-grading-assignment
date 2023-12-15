@@ -24,7 +24,6 @@ const Dashboard = () => {
             <div className="container mx-auto mt-20 p-8 bg-white rounded-lg shadow-lg">
                 <h2 className="text-3xl font-semibold mb-6">Dashboard</h2>
 
-                { }
                 <div className="mb-8">
                     <h3 className="text-xl font-semibold mb-4 text-gray-800">Current Grades</h3>
                     <ul className="list-disc pl-6">
@@ -36,7 +35,6 @@ const Dashboard = () => {
                     </ul>
                 </div>
 
-                { }
                 <div>
                     <h3 className="text-xl font-semibold mb-4 text-gray-800">Missing Grades Alerts</h3>
                     <ul className="list-disc pl-6">
@@ -52,7 +50,6 @@ const Dashboard = () => {
                     </ul>
                 </div>
 
-                { }
                 <div className="flex items-center mt-8 grid grid-cols-1 sm:grid-cols-3">
                     <div className='mx-auto w-48'>
                         <Button color="green" handleClick={() => window.location.href = "/rmg"}>

@@ -21,11 +21,10 @@ const GradeReportPage = () => {
 
     return (
         <>
-            <Navbar loggedIn={true} username={""} />
+            <Navbar loggedIn={true} username={"James Caster"} />
             <div className="container mx-auto mt-20 p-8 bg-white rounded-lg shadow-lg">
                 <h2 className="text-3xl font-semibold mb-6">Grade Report</h2>
 
-                { }
                 <div className="mb-4">
                     <label htmlFor="semester" className="block text-sm font-medium text-gray-700">
                         Filter by Semester:
@@ -46,7 +45,6 @@ const GradeReportPage = () => {
                     </select>
                 </div>
 
-                { }
                 <table className="w-full border-collapse">
                     <thead>
                         <tr className="bg-gray-200">
@@ -74,7 +72,6 @@ const GradeReportPage = () => {
                     </tbody>
                 </table>
 
-                { }
                 <div className="mt-8">
                     <Button handleClick={() => window.history.back()}>Back</Button>
                 </div>

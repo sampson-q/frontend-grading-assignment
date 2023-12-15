@@ -26,17 +26,14 @@ const Navbar = ({loggedIn, username}) => {
                     <div className="flex items-center">
                         {!loggedIn &&
                             <>
-                                {/* Move the links here, outside of the responsive container */}
                                 <div className="text-white sm:flex hidden">
                                     <Link to="/login" className="text-white ml-4">Login</Link>
-                                    <Link to="/faqs" className="text-white ml-4">FAQs</Link>
                                     <Link to="/contact" className="text-white ml-4">Contact Support</Link>
                                 </div>
                             </>
                         }
                         {loggedIn &&
                             <>
-                                {/* Move the links here, outside of the responsive container */}
                                 <div className="text-white font-semibold sm:flex hidden">
                                     Welcome, {username}!
                                     <Link to="/" className="ml-6">Logout</Link>

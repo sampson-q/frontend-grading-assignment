@@ -1,7 +1,7 @@
 // HomePage.js
 
 import React from 'react';
-import Navbar from '../components/Navbar'; // Adjust the path based on your project structure
+import Navbar from '../components/Navbar';
 import Button from '../components/Button';
 
 const LandingPage = () => {
@@ -10,7 +10,7 @@ const LandingPage = () => {
     }
     return (
         <div>
-            <Navbar loggedIn={false} /> {/* Adjust loggedIn status */}
+            <Navbar loggedIn={false} />
             <div className="container mx-auto my-auto mt-8 p-4">
                 <div className="text-center">
                     <h1 className="text-4xl font-bold mb-[-50px] mt-20">Welcome to the Missing Grade Reporting System</h1>

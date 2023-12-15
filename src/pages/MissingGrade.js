@@ -45,7 +45,7 @@ const MissingGradeForm = () => {
 
     return (
         <>
-            <Navbar loggedIn={true} username={"Dorinda Kpo"} />
+            <Navbar loggedIn={true} username={"James Caster"} />
             <div className="container mx-auto mt-8 p-8 bg-white rounded-lg shadow-lg">
                 <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-12 px-2 py-1">
                     <div className="sm:col-span-11">

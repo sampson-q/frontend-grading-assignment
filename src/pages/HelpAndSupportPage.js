@@ -22,7 +22,7 @@ const HelpAndSupportPage = () => {
 
     return (
         <>
-            <Navbar loggedIn={false} /> { }
+            <Navbar loggedIn={false} />
             <div className="container mx-auto mt-5 p-8 bg-white rounded-lg shadow">
 
                 <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-12 px-2 py-1">
@@ -36,7 +36,6 @@ const HelpAndSupportPage = () => {
                     </div>
                 </div>
 
-                { }
                 <div className="mb-8">
                     <h3 className="text-xl font-semibold mb-4 text-gray-800">Frequently Asked Questions (FAQ)</h3>
                     <ul className="list-disc pl-6">
@@ -48,11 +47,9 @@ const HelpAndSupportPage = () => {
                             <span className="font-semibold">Q: Can I contact my instructor regarding grades?</span><br />
                             A: Yes, you can use the <a href="/icp">Contact Instructor</a> page for that purpose.
                         </li>
-                        { }
                     </ul>
                 </div>
 
-                { }
                 <div>
                     <h3 className="text-xl font-semibold mb-4 text-gray-800">Contact Technical Support</h3>
                     <form onSubmit={handleContactFormSubmit}>
